@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .receipt {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            /*text-decoration: underline;*/
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            font-size: 14px;
+        }
+        th {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+        }
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        .handwritten {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: underline;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            font-size: 12px;
+        }
+        .signature-part {
+            flex: 1;
+            text-align: center;
+      		margin-top:50px
+        }
+    </style>
+</head>
+<body>
+
+<div class="receipt" style="background: yellow">
+    <div class="header">
+      <h1>College Management</h1>
+        <div class="title">College Result</div>
+        <div>Date: <span class="">{{date}}</span>
+          <!-- <p>Receipt No :&nbsp;&nbsp;<span style="background: yellow">{{receipt_no}}</span></p> -->
+<!--          <p>Admission No :&nbsp;&nbsp;{{admission_no}}</p>-->
+          <p>Name :<span style='text-decoration: underline;'>{{my_name}}</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Mother Name:{{mname}} &emsp;&emsp;&emsp;&emsp;&emsp;Branch: <span style="text-decoration: underline;">{{department}}</span> </p>
+                    <!-- &nbsp;&nbsp;&nbsp;FE&nbsp;/&nbsp;SE&nbsp;/&nbsp;DSE&nbsp;/&nbsp;TE&nbsp;/&nbsp;FY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+           <!-- <p>Drawn on :&nbsp;&nbsp;{{drawn}}</p> -->
+          <!-- <p>Amount Paid in Words :<span style='text-decoration: underline;'>{{amount_words}} </span>only -->
+      </div>
+    </div>
+    <table border="1">
+        <tr>
+          <th>Subjects</th>
+          <th>Marks Obtained</th>
+          <th>Passing Marks</th>
+          <th>Totas Marks</th>
+        </tr>
+        <tr>
+          <td>ENGINEERING <br/>MATHEMATICS IV</td>
+          <td>{{emv}}</td>
+          <td>33</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>{{python}}</td>
+          <td>33</td>
+          <td>500</td>
+        </tr>
+        <tr>
+            <td>Computer Organization<br/> And Architecture</td>
+            <td>{{COA}}</td>
+            <td>33</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>Operating System</td>
+            <td>{{OS}}</td>
+            <td>33</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>Computer Networking</td>
+            <td>{{CNND}}</td>
+            <td>33</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td><b>GRAND Total</b></td>
+            <td><b>{{GT}}</b></td>
+            <td><b>CGPA</b></td>
+            <td>{{CGPA}}</td>
+          </tr>
+          <tr>
+            <td><b>Batch</b></td>
+            <td><b>{{BAtch}}</b></td>
+            <td><b>RESULT</b></td>
+            <td>{{Result}}</td>
+          </tr>
+        <!-- Add more rows if needed -->
+      </table>
+      <div class="footer">
+        <div class="signature-part">
+            <span class="signature">Authority Signature 1</span><br>
+            <!-- Optionally include a line here for the physical signature -->
+        </div>
+        <div class="signature-part">
+            <span>College Stamp</span><br>
+            <!-- Image or representation of the stamp -->
+        </div>
+        <div class="signature-part">
+            <span class="signature">Authority Signature 2</span><br>
+            <!-- Optionally include a line here for the physical signature -->
+        </div>
+    </div>
+</div> 
+</div>

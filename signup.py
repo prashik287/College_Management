@@ -1,0 +1,105 @@
+from tkinter import Tk
+import sqlite3
+from tkinter import *
+from tkinter.ttk import Treeview
+from random import choice
+from tkinter.messagebox import showinfo
+from Std_info_BackEnd import getimage,update
+# root = Tk()
+# root.title("Test")
+
+# conn = sqlite3.connect('student.db')
+# cursor = conn.cursor()
+
+# a = cursor.execute('SELECT stdid,name,fname,mname,address,mobno,email,dob,gender,department from student')
+# s = a.fetchall()
+# print(len(s))
+
+# table = Treeview(root, columns=('stdid', 'Name', 'fname', 'mname', 'address', 'mobno', 'email', 'dob', 'gender',
+#                                 'department'), show=('headings'))
+
+# table.heading('stdid', text='ID')
+# table.heading('Name', text='Name')
+# table.heading('fname', text='Father Name')
+# table.heading('mname', text='Mother Name')
+# table.heading('address', text='Address')
+# table.heading('mobno', text='Mobile Number')
+# table.heading('email', text='Email')
+# table.heading('dob', text='Date of Birth')
+# table.heading('gender', text='Gender')
+# table.heading('department', text='Department')
+# table.column('stdid',width=100)
+# table.column('Name',width=100)
+# table.column('dob',width=100)
+
+
+# for row in s:
+#     table.insert(parent='', index=0, values=row)
+
+
+# def show_info(a):
+#     try:
+#         selectedItem = table.selection()[0]
+#         # print(table.item(selectedItem)['values'])
+#         a = table.item(selectedItem)['values']
+#         print(a[0])
+#     #   table.delete(selectedItem)
+
+#     except Exception as e:
+#         print(e)
+
+# L1 = Label(root,text='')
+# L1.pack()
+# # def delete_all_rows():
+# #     print(table.get_children())
+# def delete_all_rows():
+#     for row in table.get_children():
+#         print(row)
+#         print(table.item(row)['values'][0])
+#         if table.item(row)['values'][0] == 2024047:
+#             print(table.item(row)['values'])
+#             L1.config(text=table.item(row)['values'][0])
+#             print("Deleted")
+#         else:
+#             print("Record Not Found")
+
+
+# # table.bind("<<TreeviewSelect>>", show_info)
+# table.pack()
+
+
+ 
+# # a = getimage('2024CY020')
+# # print(a)
+# # with open('user.png','wb') as f:
+# #     f.write(a[0])
+# # update(2024047,'kali','Ravan','Mandodari','Lanka',85857474949,'pe83','5/22/20','Male','\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x01\xc2\x00\x00\x01\xc2\x01\x00\x00\x00\x00Tc\xf4\xe8\x00\x00\x03\x92IDATx\x9c\xed\x9cM\x8a\xe30\x10F_\x8d\r\xbdT`\x0e\xd0G\xb1o0G\x1a\xfaf\xf6Qr\x80\x01{\x19P\xa8Y\xe8\xc7\x8a3\xcd@\x93\xd0I\xf8jaH\xec\x87,\xf8(\x95\xaa\xca2\xe7k6\xff\xf8"\x08"E\x8a\x14)R\xa4H\x91\x8fGZ\xb6\x1e\xb3\xc3\xd9`\xedI\x97\xd9z\x98\x0f\x00kyj\xfc\xe6\xb7\x15\xf9X$\xee\xee\xce\xe0\xee\xeeK\xe7@\xe7\x10\xdc\xdb\xbbK\x97.\xcd\xc3\xd3s\xcdS\xe4\xfd\xc9\xb5\xf8\x97\xc1O\xc6\xb0\x9c\x8da!\xb9 \xff8\x9c\r\x003\xebo7\xa6\xc8\xd7 \xfb\xddog=\x00\xebOg~w\x80s\x0f\xe1\xcf\xfe\xb9g\x9b\xa7\xc8\xfb\x91{m$\x7fC\x88\x18\x18\x0c\x0b\x9e\xc3\xa3\x9b\x8d)\xf2\xb5\xc8"\x8e\xe0\xc0\x9a\xfd\x90\xcf\xd6E\x86\t\x80s\xef\xf3\xafz\xf7\x16c\x8a|-2G\xcd\xd9\xba&~\xbe\xbe\x94\xa7\x14S\x8bl-\xf9\xa1\xcd\xbf8+0\x1f:\x1cN\xe6\x10\xf1\xf9\xfdd\xd9U\xddbL\x91\xafE\xd6\xbd}\xac\xffte\xf7\x1e"\xee\x1eI~\x88\xe0\xd9\x19\xc9\x0f\x89\xbc\xb0FC\x83G|\xa2s\x9fj~h\x02\x92\x9a\xa6\x10\x1bB\x1a\x12Ym\xcb"&\xbd$\x81\x00[\x14T<\x92\x17g$\r\x89l\xad\xd1P\x92OQ\t\x84\xbc\x8c\xb9/\xd4U\r\xade"wV\x1cO\x97j\x1d\xf9\x92\x966\xaf\xc5\x8dv\x19\x93\x86D^Z\xd6\xc9\x02\x10J<\xe4\x0b\xb4\xbe\x89\xea\x87<*\x1e\x12\xb9\xb3f\x05\x03\x92\x86\x92\x9a\xdc#>\x05\xcfni3\xf9!\x91\x9f\x92\xc1\xdd\xc6p\xb2\xbc\x99\x07Jf1\x17\xf4S\xb0}\xd31E\xbe\n9\x1c\xcd\xdc\x8ffi\x19\x9bk\xa1~\\sOQ^\xee(\xe2z\xcey\x8a\xbc\x1bicrA\xeef\x07`8\xbeyj?\x03\xf0i\xed1K\xc9\xeaHvF\xcf8O\x91\xf7 KL]\x02\xeb\xdc\x88\xf6\x8f\x1c\xa3{\xccw\x15\x0f\x89\xbc\xb0fo?\x85\xbc\xf3J6\xd4\x84\x105\xce\xae\xd9FiHd\xb5\x9c\x7f\xa6\xe4\xa4\xdb\x86\xd8X3\x90\xbb\r\x9b4$\xf2\x8a\x1c\xfcd\xfe\xf1\x1e\xb1\xb1\xfe\x9cRc\xbe\xe5\xb6\xb4\x94\xb6>\xbe)\xa6\x16\xb9\xb3R\x07\xcb\xebVS\xad\'\xd4\x18\xc9c\x93\xa2V<$\xf2\xd2v\xf5\xb2\xfc\xdf\x02\xa5\xbe\x9a#\xe9\xf6\xae4$\xf2\x8a\xf4)\x9c\xd2\xf7e\xa5W(\x92>\xee\x00\xb01\x9c\xcc\xc6\xb5O\x1e\xc9\xc6o~[\x91\x8fE6k\xd9E]\xa3+u\xd8\xa6\x9a\x96co\xf9!\x91\x97\xd6\xc4C@\xd3jV\xfa\xd2\xbcV8\xb6\xed\xbf4$\xb2\xb1-\x1e\xda\xb5xlQP\xce,.\x17\xbeI\x1a\x12Y\xac\xd1\xd0V\x0c\xcb\xadf\x17\xad\xd4\x9b\xc9\x0f\x89l\xad~\xd7\x11\xf3\xc7\x1d\xc3D\xfeBz.\x89!\x87s\xcf0\x81AW\x96\xba\xe7\x9a\xa7\xc8{\x93\xdb\xb9\x1f\xc0\xd9l\x0c\x91\x14g\x7f\xbc\x9f\x8c\xf9\xd0\xe5\x8f]\x87\x05l\xfc\xe6\xb7\x15\xf9X\xe4\xd5\xb9\x1f\xb5;\xbf\xa4\x86J\x9c=\xd4\xfd\x9b\xe2!\x91\x17\xb6U\xc4\x9a\xc0:\t)\xd4\xc0z)O+O-\xf2\xffdsX\xcc\xda.m\xb9\xb4\xcf\xd9>#\xbf>\xa6\xc8\x97"S\xbf\xd9\xef\xda\x00\x92\x8e@\xa3\xf3\x9c\xacV\x1f\xa3\xc8\xbd\xed\xcf\xfd`X~F\xd2!Da\xc1\x06\x07c=\xe0\xacoN\xdd\xab=\xdb<E\xde\x8f\xcc\x1a\xca\xda\xe8\xb0t\xf4Pp\x18\x8e}$\x9fa\xe5\xf9F\x92\xd4\xb7\xbd\xad\xc8G$\xaf\xcf\xfd\xd8~\x86\x88\xd7\xbc\xa3\xef\xef>\xd7<E\x8a\x14)R\xa4H\x91"?\xb3\xbf\xa0\xfbKU!A\x06\xa6\x00\x00\x00\x00IEND\xaeB`\x82')    
+try:
+    conn = sqlite3.connect('student.db')
+    cursor = conn.cursor()
+#     cursor.execute('CREATE TABLE IF NOT EXISTS Image(Image BLOB)')
+#     conn.commit()
+#     with open('totp.png','rb') as file:
+#             data = file.read()
+#     # print(data)
+    a = cursor.execute('Select img from student where stdid == 2024041')
+    print(a.fetchall())
+    # with open('user.png','wb') as f:
+    #      f.write(s)
+
+#     cursor.execute('INSERT INTO Image(Image) VALUES(?) ',(data,))
+#     a = cursor.execute('Select * from Image')
+#     # print(a.fetchall()[0][0])
+#     a= a.fetchall()[0][0]
+#     print(a)
+#     # n = a.fetchall()
+#     # print(n)
+#     with open('retrieve_image.png','wb') as f:
+#           f.write(a)
+#     conn.close()
+except Exception as e:
+      print(e)
+# a = cursor.execute('Select * from Image')
+# print(a.fetchall())
+# delete_all_rows()
+# root.mainloop()
